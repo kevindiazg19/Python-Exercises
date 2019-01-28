@@ -1,3 +1,11 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
 def sockMerchant(n, ar):
   #dic to store n socks, at the end there'll be left only odd socks
   rout={}
@@ -16,3 +24,17 @@ def sockMerchant(n, ar):
           rout[ar[i]]=1
   #print(num) #verification purposes
   return num
+
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    n = int(input())
+
+    ar = list(map(int, input().rstrip().split()))
+
+    result = sockMerchant(n, ar)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
